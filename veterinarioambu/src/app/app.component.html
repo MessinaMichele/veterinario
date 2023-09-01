@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Applicazione di Prenotazione Veterinaria</h1>
+
+
+  <app-prenotazione-form (nuovaPrenotazione)="aggiungiPrenotazione($event)"></app-prenotazione-form>
+
+  <hr>
+
+  <h2>Elenco delle Prenotazioni</h2>
+
+  <app-elenco-prenotazioni [prenotazioni]="prenotazioni"></app-elenco-prenotazioni>
+</div>

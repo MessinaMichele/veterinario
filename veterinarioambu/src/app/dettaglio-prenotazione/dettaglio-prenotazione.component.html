@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Dettagli Prenotazione</h5>
+    <p class="card-text">Data della prestazione: {{ prenotazione?.dataPrestazione | date:'dd/MM/yyyy' }}</p>
+    <p class="card-text">Ora della prestazione: {{ prenotazione?.oraPrestazione }}</p>
+    <p class="card-text">Nome del proprietario: {{ prenotazione?.nomeProprietario }}</p>
+    <p class="card-text">Cognome del proprietario: {{ prenotazione?.cognomeProprietario }}</p>
+    <p class="card-text">Telefono del proprietario: {{ prenotazione?.telefonoProprietario }}</p>
+    <p class="card-text">Tipo di animale: {{ prenotazione?.tipoAnimale }}</p>
+    <p class="card-text">Tipo di prestazione: {{ prenotazione?.tipoPrestazione }}</p>
+    <p class="card-text">Annotazioni: {{ prenotazione?.annotazioni }}</p>
+
+  </div>
+</div>

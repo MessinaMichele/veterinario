@@ -1,0 +1,38 @@
+<div class="container mt-4">
+    <h1>Ambulatorio Veterinario Sant'Ambroeus</h1>
+
+    <app-prenotazione-form (nuovaPrenotazione)="aggiungiPrenotazione($event)"></app-prenotazione-form>
+  
+
+    <table class="table table-striped mt-4">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Ora</th>
+          <th>Proprietario</th>
+          <th>Telefono</th>
+          <th>Animale</th>
+          <th>Azioni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prenotazione of prenotazioni; let i = index">
+          <td>{{ prenotazione.dataPrestazione | date:'dd/MM/yyyy' }}</td>
+          <td>{{ prenotazione.oraPrestazione }}</td>
+          <td>{{ prenotazione.nomeProprietario }} {{ prenotazione.cognomeProprietario | slice:0:1 }}.</td>
+          <td>{{ prenotazione.telefonoProprietario }}</td>
+          <td>{{ prenotazione.tipoAnimale }}</td>
+          <td>
+            <a (click)="mostraDettagli(i)">Dettagli</a>
+            <a (click)="cancellaPrenotazione(i)">Cancella</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+
+    <div *ngIf="dettagliVisibili" class="mt-4">
+      <app-dettaglio-prenotazione [prenotazione]="prenotazioneSelezionata"></app-dettaglio-prenotazione>
+    </div>
+  </div>
+  

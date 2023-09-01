@@ -1,0 +1,37 @@
+<form (ngSubmit)="submitForm()" class="mb-4">
+  <div class="form-group">
+    <label>Data della prestazione (gg/mm/aaaa)</label>
+    <input type="text" class="form-control" [(ngModel)]="dataPrestazione" name="dataPrestazione" required>
+  </div>
+  <div class="form-group">
+    <label>Ora della prestazione (hh:mm)</label>
+    <input type="text" class="form-control" [(ngModel)]="oraPrestazione" name="oraPrestazione" required>
+  </div>
+  <div class="form-group">
+    <label>Nome del proprietario</label>
+    <input type="text" class="form-control" [(ngModel)]="nomeProprietario" name="nomeProprietario" required>
+  </div>
+  <div class="form-group">
+    <label>Cognome del proprietario</label>
+    <input type="text" class="form-control" [(ngModel)]="cognomeProprietario" name="cognomeProprietario" required>
+  </div>
+  <div class="form-group">
+    <label>Telefono del proprietario</label>
+    <input type="text" class="form-control" [(ngModel)]="telefonoProprietario" name="telefonoProprietario" required>
+  </div>
+  <div class="form-group">
+    <label>Tipologia dell'animale</label>
+    <input type="text" class="form-control" [(ngModel)]="tipoAnimale" name="tipoAnimale" required>
+  </div>
+  <div class="form-group">
+    <label>Tipo di prestazione</label>
+    <input type="text" class="form-control" [(ngModel)]="tipoPrestazione" name="tipoPrestazione" required>
+  </div>
+  <div class="form-group">
+    <label>Eventuali annotazioni</label>
+    <textarea class="form-control" [(ngModel)]="annotazioni" name="annotazioni"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Inserisci</button>
+</form>
+
+  
